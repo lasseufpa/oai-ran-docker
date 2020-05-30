@@ -6,7 +6,7 @@ VOLUME ["/dev/bus/usb"]
 ENV USER=root
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && apt-get install linux-image-$(uname -r) linux-headers-$(uname -r) software-properties-common git wget git build-essential sudo psmisc vim -yq && git clone -b 2020.w19 https://gitlab.eurecom.fr/oai/openairinterface5g.git 
+RUN apt-get update && apt-get install linux-image-$(uname -r) linux-headers-$(uname -r) software-properties-common git wget git build-essential sudo psmisc vim -yq && git clone -b 2020.w16 https://gitlab.eurecom.fr/oai/openairinterface5g.git 
 
 WORKDIR /openairinterface5g/
 
