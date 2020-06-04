@@ -33,3 +33,26 @@ services:
         volumes:
             - "./config_files/:/config_files"
             - "/dev/bus/usb:/dev/bus/usb"
+
+    vnf:
+        build: ./vnf/
+        image: vnf
+        privileged: true
+        network_mode: host
+        stdin_open: true
+        tty: true
+        volumes:
+            - "./config_files/:/config_files"
+            - "/dev/bus/usb:/dev/bus/usb"
+
+    pnf:
+        build: ./pnf/
+        image: pnf
+        privileged: true
+        network_mode: host
+        stdin_open: true
+        tty: true
+        volumes:
+            - "./config_files/:/config_files"
+            - "/dev/bus/usb:/dev/bus/usb"
+
