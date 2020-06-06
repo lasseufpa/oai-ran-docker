@@ -9,6 +9,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 WORKDIR /openairinterface5g/
 
+COPY rcc.band7.tm1.nfapi.conf ./ci-scripts/conf_files/rcc.band7.tm1.nfapi.conf 
+
 RUN /bin/bash -c "source oaienv;./cmake_targets/build_oai --eNB"
 
 #ENTRYPOINT [ "./cmake_targets/tools/make_agent_cache; "] 
