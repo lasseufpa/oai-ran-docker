@@ -17,5 +17,7 @@ COPY ue_eurecom_test_sfr.conf ./openair3/NAS/TOOLS/ue_eurecom_test_sfr.conf
 
 RUN /bin/bash -c "./targets/bin/conf2uedata -c ./openair3/NAS/TOOLS/ue_eurecom_test_sfr.conf -o ."
 
-RUN /bin/bash -c "touch ./ran.log; ln -sf /proc/1/fd/1 ./ran.log"
+COPY ran.sh ./ran.sh
+
+RUN chmod +x ran.sh
 
