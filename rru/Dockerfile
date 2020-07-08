@@ -9,4 +9,6 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 WORKDIR /openairinterface5g/
 
-RUN /bin/bash -c "source oaienv ;./cmake_targets/build_oai -w USRP --eNB"
+RUN /bin/bash -c "source oaienv ;./cmake_targets/build_oai -I -w USRP --eNB"
+
+#RUN /bin/bash -c "source oaienv ; ./cmake_targets/build_oai -c -C; ./cmake_targets/build_oai -I ; ./cmake_targets/build_oai -w USRP --eNB"
