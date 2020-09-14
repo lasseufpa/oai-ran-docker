@@ -10,4 +10,4 @@ RUN apt-get update && apt-get install linux-image-$(uname -r) linux-headers-$(un
 
 WORKDIR /openairinterface5g/
 
-RUN /bin/bash -c "source oaienv ; ./cmake_targets/build_oai -I  --install-system-files --install-optional-packages;"
+RUN /bin/bash -c "source oaienv ; git checkout -f v1.2.2; ./cmake_targets/build_oai -I  --install-system-files --install-optional-packages;"
