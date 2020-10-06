@@ -55,4 +55,6 @@ services:
         volumes:
             - "./config_files/:/config_files"
             - "/dev/bus/usb:/dev/bus/usb"
-
+    flexran-controller:
+        build: ./flexran-controller/
+        image: flexran-controller
