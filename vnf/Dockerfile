@@ -1,4 +1,4 @@
-FROM base-ran-nfapi
+FROM base-nfapi
 MAINTAINER Lucas Novoa <lucasnmartins300@gmail.com>
 
 VOLUME ["/dev/bus/usb"]
